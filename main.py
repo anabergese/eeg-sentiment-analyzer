@@ -4,8 +4,9 @@ warnings.filterwarnings("ignore", message="pkg_resources is deprecated.*")
 
 from band_power import get_band_powers
 from board_interface import get_data_from_board
-from plot_utils import plot_psd
+from plot_utils import show_state_color
 from signal_processing import compute_psd, preprocess_signal
+from state_detector import detect_user_state
 
 
 def main():
@@ -19,7 +20,12 @@ def main():
     for name, value in bands.items():
         print(f"{name}: {value:.4f}")
 
-    plot_psd(freqs, psd)
+    # Detectar estado emocional
+    estado, color = detect_user_state(
+        data, eeg_channels, freqs=None, psd_method=compute_psd, fs=fs
+    )
+    print(f"Estado detectado: {estado} {color}")
+    show_state_color(estado, color)
 
 
 if __name__ == "__main__":
