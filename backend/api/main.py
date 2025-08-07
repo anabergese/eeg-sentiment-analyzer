@@ -1,4 +1,8 @@
-from analysis import run_eeg_analysis
+import warnings
+
+warnings.filterwarnings("ignore", message="pkg_resources is deprecated.*")
+
+from application.analysis import run_eeg_analysis
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
