@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
@@ -26,7 +25,23 @@ function App() {
       <h1>EEG Visualizer</h1>
       <p>Analiza datos de EEG sintéticos y visualiza las señales y tu estado emocional.</p>
       <button onClick={handleAnalyze} disabled={loading}>
-        {loading ? "Analizando..." : "Comenzar Análisis"}
+        {loading ? (
+          <>
+            Analizando...
+            <img
+              src="/spinnerGIF.gif"
+              alt="Loading data"
+              style={{
+                width: "10px",
+                height: "10px",
+                marginLeft: "10px",
+                verticalAlign: "middle",
+              }}
+            />
+          </>
+        ) : (
+          "Comenzar Análisis"
+        )}
       </button>
     </div>
   );
