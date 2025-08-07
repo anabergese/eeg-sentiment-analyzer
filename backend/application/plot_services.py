@@ -1,6 +1,7 @@
 import os
 
-from infrastructure.plot_utils import plot_all_psds, plot_all_spectrograms
+from infrastructure.plot_psds import plot_all_psds
+from infrastructure.plot_spectograms import plot_all_spectrograms
 
 STATIC_DIR = "static"
 
