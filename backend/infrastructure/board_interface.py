@@ -4,7 +4,7 @@ import time
 from brainflow.board_shim import BoardIds, BoardShim, BrainFlowInputParams
 
 
-def get_data_from_board(duration_sec=6):
+def get_data_from_board(duration_sec):
     BoardShim.enable_dev_board_logger()
     params = BrainFlowInputParams()
     board_id = BoardIds.SYNTHETIC_BOARD.value
