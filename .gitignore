@@ -1,19 +1,26 @@
-# Node.js
-node_modules/
-
 # Python
-venv/
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 *.pyc
+*.log
 
-# VSCode / IDE
+# Virtual env
+venv/
+env/
+
+# VSCode or IDE
 .vscode/
 .idea/
 
-# System
-.DS_Store
+# FastAPI / Static builds
+/static/*.png
 
-# Compiled files
-*.png
-*.jpg
-*.jpeg
+# Node
+node_modules/
+dist/
+*.log
+
+# System files
+.DS_Store
