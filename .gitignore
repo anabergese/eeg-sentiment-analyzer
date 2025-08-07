@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+
+# Compiled files
+*.png
+*.jpg
+*.jpeg
