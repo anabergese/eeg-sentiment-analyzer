@@ -23,11 +23,11 @@ function App() {
   return (
     <div className="app-container">
       <h1>EEG Visualizer</h1>
-      <p>Analiza datos de EEG sintéticos y visualiza las señales y tu estado emocional.</p>
+      <p>Explore synthetic EEG data, visualize brain activity, and understand your emotional state.</p>
       <button onClick={handleAnalyze} disabled={loading}>
         {loading ? (
           <>
-            Analizando...
+            Analyzing...
             <img
               src="/spinnerGIF.gif"
               alt="Loading data"
@@ -40,7 +40,7 @@ function App() {
             />
           </>
         ) : (
-          "Comenzar Análisis"
+          "Run Analysis"
         )}
       </button>
     </div>

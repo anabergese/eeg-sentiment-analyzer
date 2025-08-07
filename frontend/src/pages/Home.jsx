@@ -12,7 +12,6 @@ const Home = () => {
     useEffect(() => {
         const stored = localStorage.getItem("eegResult");
         if (!stored) {
-        // Si el usuario accede directamente sin pasar por /analyze
         navigate("/");
         } else {
         setResult(JSON.parse(stored));
@@ -22,15 +21,37 @@ const Home = () => {
     if (!result) return <p>Loading Results...</p>;
 
     return (
-        <div style={{ display: "flex", gap: "2rem", padding: "2rem" }}>
-            <div style={{ flex: 1 }}>
-                <EEGPSDChart psdPath={result.psd_image} />
-                <EEGSpectrogramChart spectrogramPath={result.spectrogram_image} />
-            </div>
-            <div style={{ flex: 1 }}>
-                <EEGBrainImage />
-                <EEGState estado={result.estado} color={result.color} />
-            </div>
+    <div
+        style={{
+            display: "flex",
+            height: "100vh",
+            overflow: "hidden",
+        }}
+        >
+        <div
+            style={{
+            flex: "0 0 40%",
+            position: "sticky",
+            top: 0,
+            height: "100vh",
+            overflow: "hidden",
+            padding: "2rem",
+            borderRight: "1px solid #ddd",
+            }}
+        >
+            <EEGBrainImage />
+        </div>
+        <div
+            style={{
+            flex: 1,
+            overflowY: "auto",
+            padding: "2rem",
+            }}
+        >
+            <EEGState estado={result.estado} color={result.color} />
+            <EEGPSDChart psdPath={result.psd_image} />
+            <EEGSpectrogramChart spectrogramPath={result.spectrogram_image} />
+        </div>
         </div>
     );
 };
