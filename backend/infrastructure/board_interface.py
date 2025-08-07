@@ -4,7 +4,7 @@ import time
 from brainflow.board_shim import BoardIds, BoardShim, BrainFlowInputParams
 
 
-def get_data_from_board(duration_sec):
+def get_data_from_board():
     BoardShim.enable_dev_board_logger()
     params = BrainFlowInputParams()
     board_id = BoardIds.SYNTHETIC_BOARD.value
@@ -14,7 +14,7 @@ def get_data_from_board(duration_sec):
     try:
         board.prepare_session()
         board.start_stream()
-        time.sleep(duration_sec)
+        time.sleep(10)
         data = board.get_board_data()
         print("Data received from the board:", data.shape)
     finally:
