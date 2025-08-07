@@ -1,18 +1,24 @@
 const EEGState = ({ estado, color }) => {
     return (
-        <div style={{ marginTop: "2rem" }}>
-            <h2>Estado emocional detectado</h2>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+        }}>
+            <h2>
+                Emotional State Detected: <span style={{ fontSize: "1.5rem" }}>{estado}</span>
+            </h2>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                 <div
                 style={{
-                    width: "40px",
-                    height: "40px",
+                    width: "300px",
+                    height: "300px",
                     backgroundColor: color,
-                    borderRadius: "50%",
                     border: "1px solid #ccc"
                 }}
                 />
-                <span style={{ fontSize: "1.5rem" }}>{estado}</span>
             </div>
         </div>
     );

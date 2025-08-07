@@ -12,7 +12,6 @@ function App() {
     try {
       const response = await fetch("/analyze");
       const result = await response.json();
-      // Guarda los resultados en localStorage o en una store global (simplificamos usando localStorage aquí)
       localStorage.setItem("eegResult", JSON.stringify(result));
       navigate("/home");
     } catch (error) {

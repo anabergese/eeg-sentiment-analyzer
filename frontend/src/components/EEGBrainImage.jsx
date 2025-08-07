@@ -1,7 +1,7 @@
 const EEGBrainImage = () => {
     return (
         <div>
-            <h2>Mapa de canales EEG</h2>
+            <h2>EEG Channels (10-10 System)</h2>
             <img
                 src="/EEG_10-10_system.svg"
                 alt="EEG Brain Map"
