@@ -1,7 +1,7 @@
 const EEGSpectrogramChart = ({ spectrogramPath }) => {
     return (
         <div>
-            <h2>Spectrogram</h2>
+            <h2>Spectrogram by EEG channel</h2>
             <img
                 src={spectrogramPath}
                 alt="Spectrogram Chart"

@@ -4,6 +4,7 @@ import EEGBrainImage from "../components/EEGBrainImage";
 import EEGState from "../components/EEGState";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
     const [result, setResult] = useState(null);
@@ -21,38 +22,16 @@ const Home = () => {
     if (!result) return <p>Loading Results...</p>;
 
     return (
-    <div
-        style={{
-            display: "flex",
-            height: "100vh",
-            overflow: "hidden",
-        }}
-        >
-        <div
-            style={{
-            flex: "0 0 40%",
-            position: "sticky",
-            top: 0,
-            height: "100vh",
-            overflow: "hidden",
-            padding: "2rem",
-            borderRight: "1px solid #ddd",
-            }}
-        >
+    <div className="home-container">
+        <div className="sidebar">
             <EEGBrainImage />
-        </div>
-        <div
-            style={{
-            flex: 1,
-            overflowY: "auto",
-            padding: "2rem",
-            }}
-        >
             <EEGState estado={result.estado} color={result.color} />
+        </div>
+        <div className="scrollable-content">
             <EEGPSDChart psdPath={result.psd_image} />
             <EEGSpectrogramChart spectrogramPath={result.spectrogram_image} />
         </div>
-        </div>
+    </div>
     );
 };
 

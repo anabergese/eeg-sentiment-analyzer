@@ -5,7 +5,7 @@ const EEGBrainImage = () => {
             <img
                 src="/EEG_10-10_system.svg"
                 alt="EEG Brain Map"
-                style={{ width: "100%" }}
+                style={{ width: "110%" }}
             />
         </div>
     );

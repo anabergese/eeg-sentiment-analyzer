@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="app-container">
       <img src="https://caputron.com/cdn/shop/files/BraiNet-1020-Electrode-Placement-Cap.jpg" alt="EEG Cap" style={{ width: "300px", height: "300px" }} />
-      <h1>EEG Visualizer</h1>
+      <h1>Emotional EEG Visualizer</h1>
       <p>Explore synthetic EEG data, visualize brain activity, and understand your emotional state.</p>
       <button onClick={handleAnalyze} disabled={loading}>
         {loading ? (

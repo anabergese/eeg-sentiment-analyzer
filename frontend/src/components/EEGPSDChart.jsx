@@ -1,7 +1,7 @@
 const EEGPSDChart = ({ psdPath }) => {
     return (
         <div>
-            <h2>Power Spectral Density (PSD)</h2>
+            <h2>Power Spectral Density (PSD) by EEG channel</h2>
             <img
                 src={psdPath}
                 alt="PSD Chart"
