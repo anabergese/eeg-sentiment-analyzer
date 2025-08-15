@@ -2,11 +2,11 @@
 
 Visual interface for analyzing synthetic EEG (electroencephalography) data to detect user mental states such as **relaxation** or **alertness**, using **brainwave frequency analysis**. This project combines **FastAPI** (Python) for backend EEG analysis and **React + Vite** for a modern, responsive frontend.
 
-<br/>
 
 ### 📸 Preview
 
 [UI Preview](./frontend/public/ui-preview.png)
+<br/>
 
 ---
 
@@ -57,6 +57,7 @@ uvicorn api.main:app --reload
 ```
 
 ✅ The API will be available at: `http://localhost:8000/analyze`
+
 🖼️ EEG charts are served from: `http://localhost:8000/static`
 
 ---
